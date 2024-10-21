@@ -1,6 +1,6 @@
 """
- I got busted playing Genshin Impact at work... Some of my coworkers are pretty upset with me. I need your help.
- I have a general idea of how upset each coworker is, but I need the overall sentiment of the team.
+I got busted playing Genshin Impact at work... Some of my coworkers are pretty upset with me. I need your help.
+I have a general idea of how upset each coworker is, but I need the overall sentiment of the team.
 
 Here is your challenge: Given an object whose keys are strings representing the names of my coworkers, and whose values
 are numbers representing how much they still like me, return whether or not I should quit before I get fired.

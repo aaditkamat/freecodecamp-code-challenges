@@ -19,18 +19,19 @@ With input ['n','n','n','s','n','s','n','s','n','s'], return false
 def execute_walk_successfully(start, directions):
     x, y = start
     for direction in directions:
-        match direction.lower():    # Convert the direction to lowercase for case-insensitive comparison
-            case 'n':
+        match direction.lower():  # Convert the direction to lowercase for case-insensitive comparison
+            case "n":
                 y += 1
-            case 's':
+            case "s":
                 y -= 1
-            case 'e':
+            case "e":
                 x += 1
-            case 'w':
+            case "w":
                 x -= 1
             case _:
-                raise ValueError(f'Invalid direction: {direction}')
+                raise ValueError(f"Invalid direction: {direction}")
     return (x, y) == start
+
 
 # The route will take me exactly 10 minutes if the length of the array is 10
 # The route will return me to the office if after updating my location coordinates
@@ -38,9 +39,10 @@ def execute_walk_successfully(start, directions):
 def valid_route(directions):
     return len(directions) == 10 and execute_walk_successfully(start=(0, 0), directions=directions)
 
+
 if __name__ == "__main__":
-    assert valid_route(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']) == True
-    assert valid_route(['w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e']) == False
-    assert valid_route(['n', 's', 'e', 'w', 's', 'e', 'n', 'w', 'w', 'e']) == True
-    assert valid_route(['w']) == False
-    assert valid_route(['n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's']) == False
+    assert valid_route(["n", "s", "n", "s", "n", "s", "n", "s", "n", "s"]) == True
+    assert valid_route(["w", "e", "w", "e", "w", "e", "w", "e", "w", "e", "w", "e"]) == False
+    assert valid_route(["n", "s", "e", "w", "s", "e", "n", "w", "w", "e"]) == True
+    assert valid_route(["w"]) == False
+    assert valid_route(["n", "n", "n", "s", "n", "s", "n", "s", "n", "s"]) == False
